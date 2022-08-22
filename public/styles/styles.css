@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+textarea {
+  resize: none;
+}
+
+#home {
+  background-color: rgb(10, 13, 16);
+  height: 100vh;
+  justify-content: center;
+
+
+}
+
+/*Esto estaba causando que se overlapeen About me y services, tener cuidado*/
+
+/* #about-me {
+height:100vh;
+} */
+
+.titles-underline {
+  font-family: 'Rajdhani', sans-serif;
+  border-bottom: 1px solid black;
+  font-size: 2.5rem;
+}
+
+
+#home :is(h2, h3, h4, h5, h6, span) {
+
+  color: rgb(192, 192, 192);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  padding: 0.5vh 0;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+#home h1 {
+  font-size: 3.5rem;
+  opacity: 0.6;
+  color: rgb(192, 192, 192);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.3rem;
+  padding: 0.5vh 0;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+#img_profile {
+  height: 65vh;
+  opacity: 0.80;
+  margin-top: 20vh;
+  margin-left: 5vw;
+  overflow: hidden;
+  white-space: nowrap;
+  transform: scaleX(-1);
+  z-index: 1;
+}
+
+#info {
+  margin: auto 0;
+  z-index: 1;
+}
+
+.icons-info {
+
+  color: rgb(192, 192, 192);
+  margin: 5vh 0;
+  overflow: hidden;
+  white-space: nowrap;
+
+}
+
+.icons {
+  width: 18px;
+  height: 18px;
+  margin-right: 20px;
+  filter: invert(100%);
+  -webkit-filter: invert(100%);
+
+
+}
+
+.btn_resume {
+  background-color: rgb(10, 13, 16);
+  color: whitesmoke;
+  font-size: 0.8rem;
+  border: 1px solid rgb(192, 192, 192);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: color 0.3s, border 0.3s, background-color 0.3s;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+
+}
+
+.btn_resume:hover {
+  color: rgb(10, 13, 16);
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+.lateral-nav {
+  position: sticky;
+  top: 0px;
+  background-color: black;
+  height: 100vh;
+  text-align: center;
+  z-index: 1;
+
+
+}
+
+.lateral-nav a {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.lateral-nav a:hover {
+
+  color: grey;
+}
+
+.lateral-nav ul {
+  text-align: center;
+  width: max-content;
+  list-style-type: none;
+  padding: 20vh 90px 0 90px;
+}
+
+.lateral-nav li {
+  padding: 0.75rem 0;
+}
+
+.lateral-nav img {
+  margin-top: 5vh;
+  height: 100px;
+  width: 100px;
+}
+
+.titles {
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+.portrait {
+  position: relative;
+  height: 324px;
+  width: 324px;
+  margin: auto 0;
+  margin-right: 5vw;
+}
+
+.frame {
+  background-color: white;
+  border: 12px solid rgb(51, 58, 59);
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  height: 300px;
+  width: 300px;
+
+}
+
+
+#img_portrait {
+  position: absolute;
+  transform: scaleX(-1);
+  background-color: rgb(10, 13, 16);
+  height: 300px;
+  width: 300px;
+  bottom: 0;
+  right: 0;
+
+}
+
+.personal-info {
+  margin: auto 0vw;
+  width: 30vw;
+  text-align: left;
+
+}
+
+.personal_text p {
+  color: #5e5e5e;
+}
+
+
+.btn_see_work {
+  background-color: rgb(10, 13, 16);
+  border: none;
+  color: whitesmoke;
+  font-size: 0.8rem;
+  padding: 10px 20px;
+  transition: color 0.3s;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1;
+
+}
+
+.btn_see_work:hover {
+  color: rgb(158, 154, 154);
+
+}
+
+.gray-bg {
+  background-color: rgb(245, 245, 245);
+}
+
+._iam {
+  width: 25vw;
+}
+
+
+
+
+
+canvas {
+
+  position: absolute;
+  left: 0;
+  width: 100%;
+
+}
+
+
+.my-progress-bar {
+  width: 20vw;
+  height: 2px;
+  overflow: visible;
+
+
+}
+
+.my-progress-bar .progress-bar {
+  background-color: black;
+  position: relative;
+  /* animation: animate-positive 2s; */
+
+
+}
+
+.progress-bar-animation {
+  animation: animate-positive 2s;
+}
+
+
+.progress .progress-value {
+  font-size: 12px;
+  position: absolute;
+  padding: 0 8px;
+  border-radius: 3px;
+  top: -25px;
+  right: -35px;
+  background-color: #00090a;
+
+}
+
+.progress .progress-value::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: -4px;
+  border-right: 8px solid transparent;
+  border-top: 6px solid rgba(0, 9, 10, .8);
+
+}
+
+@keyframes animate-positive {
+  0% {
+    width: 0%;
+  }
+}
+
+.p-y100 {
+  padding-top: 110px !important;
+  padding-bottom: 110px !important;
+}
+
+
+.icono-frame {
+  display: flex;
+
+}
+
+.icono-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  flex-shrink: 0;
+  transition: filter 0.5s, border 0.5s;
+
+
+}
+
+/*Si toco el container*/
+.icono-frame:hover .icono-services {
+  filter: invert(100%);
+  border: 1px solid white;
+}
+
+/*Si toco el icono (child) directamente*/
+/*
+.icono:hover{
+
+  filter: invert(100%);
+  border:1px solid white;
+}
+*/
+
+
+.icono-services img {
+
+  width: 25px;
+  height: 25px;
+  filter: invert(100%);
+}
+
+.personal-data p {
+
+  padding: 0;
+  margin: 0;
+}
+
+.resume-fragment {
+
+  margin-bottom: 1em;
+}
+
+.resume-fragment h6 {
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.animate-card {
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  border-radius: 10px;
+  border: none
+}
+
+.animate-card img {
+
+  border-radius: 10px 10px 0 0;
+
+}
+
+.animate-card a {
+  text-decoration: none;
+  color: inherit
+}
+
+.animate-card:hover {
+  transform: scale(1.05);
+  z-index: 100;
+}
+
+.card-title {
+  font-weight: 600;
+}
