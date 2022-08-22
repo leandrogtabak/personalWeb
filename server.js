@@ -12,8 +12,8 @@ const transporter = nodemailer.createTransport({
   host: 'smtp.office365.com',
   port: 587,
   auth: {
-    user: 'leandrogtabak@hotmail.com',
-    pass: 'Goldis0311',
+    user: process.env.EMAIL,
+    pass: process.env.PASS,
   },
 });
 
@@ -40,7 +40,7 @@ app.post('/send', (req, res) => {
     //2. You can configure the object however you want
     const mail = {
       from: process.env.EMAIL,
-      to: 'leandrogtabak@gmail.com',
+      to: process.env.MAIL_TO,
       subject: data.subject,
       text: `${data.name} <${data.email}> \n${data.message}`,
     };
