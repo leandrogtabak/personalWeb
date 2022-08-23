@@ -18,7 +18,7 @@ textarea {
   resize: none;
 }
 
-#home {
+.home {
   background-color: rgb(10, 13, 16);
   height: 100vh;
   justify-content: center;
@@ -39,7 +39,7 @@ height:100vh;
 }
 
 
-#home :is(h2, h3, h4, h5, h6, span) {
+.home :is(h2, h3, h4, h5, h6, span) {
 
   color: rgb(192, 192, 192);
   font-family: 'Rajdhani', sans-serif;
@@ -51,7 +51,7 @@ height:100vh;
   z-index: 1;
 }
 
-#home h1 {
+.home h1 {
   font-size: 3.5rem;
   opacity: 0.6;
   color: rgb(192, 192, 192);
@@ -162,6 +162,7 @@ height:100vh;
 .titles {
   font-size: 2rem;
   padding: 10px;
+  padding-top: 62px;
   text-align: center;
 }
 
@@ -200,7 +201,7 @@ height:100vh;
 
 .personal-info {
   margin: auto 0vw;
-  width: 30vw;
+  width: 62vw;
   text-align: left;
 
 }
@@ -209,6 +210,19 @@ height:100vh;
   color: #5e5e5e;
 }
 
+.who-am-i {
+
+  padding: 62px 0;
+  width: 65vw;
+  margin: 0 auto;
+
+
+}
+
+.who-am-i-description {
+  width: 40vw;
+  padding-right: 42px;
+}
 
 .btn_see_work {
   background-color: rgb(10, 13, 16);
@@ -247,6 +261,8 @@ canvas {
   width: 100%;
 
 }
+
+
 
 
 .my-progress-bar {
@@ -302,6 +318,14 @@ canvas {
   padding-bottom: 110px !important;
 }
 
+.services {
+  width: 65%;
+  margin: 0 auto;
+}
+
+.container-services {
+  width: 70%;
+}
 
 .icono-frame {
   display: flex;
@@ -389,4 +413,101 @@ canvas {
 
 .card-title {
   font-weight: 600;
+}
+
+@media only screen and (max-width: 1024px) {
+  .lateral-nav-mobile {
+
+    display: none;
+
+  }
+
+  .personal-data-mobile div {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-profile {
+    display: none;
+  }
+
+  .info-mobile h1 {
+
+    font-size: 2rem;
+    opacity: 0.6;
+    color: rgb(192, 192, 192);
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    padding: 0.5vh 0;
+
+
+  }
+
+  .about-me-mobile {}
+
+  .titles-mobile {
+    padding-top: 42px;
+  }
+
+  .titles-underline-mobile {
+    font-size: 2rem;
+  }
+
+  .contact-me-mobile {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .who-am-i-mobile {
+    flex-direction: column;
+    padding: 42px 0;
+    width: 85vw;
+
+  }
+
+  .who-am-i-description {
+    width: 100%;
+    padding-right: 42px;
+
+  }
+
+  .personal-info-mobile {
+    margin: auto 0vw;
+    width: 95vw;
+
+  }
+
+  .my-progress-bar-mobile {
+    width: 80vw;
+    height: 2px;
+    overflow: visible;
+
+
+  }
+
+  .services-mobile {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container-services-mobile {
+    width: 95%;
+  }
+
+  .resume-fragment-mobile {
+
+    margin-bottom: 1em;
+
+  }
+
+  .resume-fragment-mobile h6 {
+    font-weight: bold;
+    padding: 0;
+    margin: 0 auto;
+  }
+
+
+
+
 }
