@@ -5,6 +5,10 @@
   font-family: 'Quicksand', sans-serif;
 }
 
+a {
+  color: inherit
+}
+
 body {
   display: flex;
   flex-direction: column;

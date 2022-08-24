@@ -14,6 +14,11 @@ observer.observe(document.querySelector('.progress-bar'));
 
 const form = document.getElementById('contact-form');
 
+const nameForm = document.getElementById('name');
+const emailForm = document.getElementById('email');
+const messageForm = document.getElementById('message');
+const messageSent = document.getElementById('messageSent');
+
 const sendMail = (mail) => {
   //1.
   fetch('/send', {
@@ -24,8 +29,11 @@ const sendMail = (mail) => {
       return response.json();
     })
     .then(function (data) {
-      console.log(data);
-      alert(data.message);
+      // alert(data.message);
+      nameForm.value = '';
+      emailForm.value = '';
+      messageForm.value = '';
+      messageSent.innerText = data.message;
     });
 };
 
